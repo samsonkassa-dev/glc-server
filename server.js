@@ -17,7 +17,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/acc', accRoute);
+app.use('/', accRoute);
 app.use('/auth', authRoutes);
 
 app.use(notFound);
