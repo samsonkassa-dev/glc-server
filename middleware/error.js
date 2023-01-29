@@ -27,7 +27,7 @@ function errorHandler(err, _, res, next) {
   const statusCode = err.statusCode || 500;
   console.log(err);
   res.status(statusCode).json({
-    message: IsJsonString(err.message) ? JSON.parse(err.message) : err.message,
+    message: IsJsonString(err.message) ? JSON.parse(err) : err,
   });
 }
 
