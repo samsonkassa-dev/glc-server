@@ -17,6 +17,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use((res, req, next) =>{
+    console.log("here")
+    next()
+})
+
 app.use('/', accRoute);
 app.use('/auth', authRoutes);
 
